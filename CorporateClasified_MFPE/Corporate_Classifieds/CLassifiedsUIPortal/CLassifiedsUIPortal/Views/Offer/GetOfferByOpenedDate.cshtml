@@ -1,0 +1,131 @@
+﻿@model IEnumerable<CLassifiedsUIPortal.Models.OfferData>
+
+@{
+    ViewData["Title"] = "GetOfferByOpenedDate";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Corporate Classifieds</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/assets/css/flex-slider.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-style.css">
+
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="index.html">Corporate Classifieds</a>
+                    </div>
+                </header>
+
+                <h1>Posted Date</h1>
+                <br/>
+                <br/>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                @Html.DisplayNameFor(model => model.OfferId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.EmployeeId)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Status)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Likes)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Category)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Details)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.OpenedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.EngagedDate)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.ClosedDate)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OfferId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.EmployeeId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Status)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Likes)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Category)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Details)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.OpenedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.EngagedDate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.ClosedDate)
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+                <br/>
+                <br/>
+                <div>
+                    <a asp-action="Index" class="btn btn-primary btn-lg">Back to List</a>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>
+   

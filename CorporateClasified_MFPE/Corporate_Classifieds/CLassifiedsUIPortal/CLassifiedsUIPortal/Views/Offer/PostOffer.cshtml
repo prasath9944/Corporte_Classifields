@@ -1,0 +1,115 @@
+﻿@model CLassifiedsUIPortal.Models.OfferData
+
+@{
+    ViewData["Title"] = "PostOffer";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Corporate Classifieds</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/assets/css/flex-slider.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-style.css">
+
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="index.html">Corporate Classifieds</a>
+                    </div>
+                </header>
+
+                <h1>Post Offer</h1>
+
+
+                <hr />
+                <div class="row">
+                    <div class="col-md-4">
+                        <form asp-action="PostOffer" id="userForm">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="OfferId" class="control-label"></label>
+                                <input asp-for="OfferId" class="form-control" required />
+                                <span asp-validation-for="OfferId" class="text-danger"></span>
+                            </div>
+                            @*
+                            <div class="form-group">
+                                <label asp-for="EmployeeId" class="control-label"></label>
+                                <input asp-for="EmployeeId" class="form-control"  required/>
+                                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+                            </div>
+                             *@
+                            <div class="form-group">
+                                <label asp-for="Status" class="control-label"></label>
+                                <input asp-for="Status" class="form-control" value="Available" readonly />
+                                <span asp-validation-for="Status" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Category" class="control-label"></label>
+                                <input asp-for="Category" class="form-control" required/>
+                                <span asp-validation-for="Category" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Details" class="control-label"></label>
+                                <input asp-for="Details" class="form-control" required/>
+                                <span asp-validation-for="Details" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="OpenedDate" class="control-label"></label>
+                                <input asp-for="OpenedDate" class="form-control" type="datetime" value="@DateTime.Now" readonly />
+                                <span asp-validation-for="OpenedDate" class="text-danger"></span>
+                            </div>
+
+
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+
+                        </form>
+
+                        @ViewBag.message
+
+
+
+                    </div>
+                </div>
+
+                <div>
+                    <a asp-action="Index">Back to List</a>
+                </div>
+
+                @section Scripts {
+                    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Corporate Classifieds</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="~/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="~/assets/css/templatemo-style.css">
+
+
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
+
+                <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <a href="index.html">Corporate Classifieds</a>
+                    </div>
+                </header>
+
+                <!-- Banner -->
+                <!-- Search Box -->
+
+
+                <form action="GetOfferByOpenedDate" method="get">
+
+                    <h4>Offer Details</h4>
+
+                    <div class="input-group">
+
+                        <input type="date" class="form-control rounded" placeholder="Enter Posted Date(YYYY-MM-DD)" name="openedDate" aria-label="Search" aria-describedby="search-addon" required />
+                        <button type="submit" class="btn btn-outline-primary">search</button>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+
+            <div class="inner">
+
+                <!-- Menu -->
+                <nav id="menu">
+                    <ul>
+                        <li><a href="@Url.Action("GetOffersList", "Home")">Home</a></li>
+                        <li>
+                            <span class="opener">Offers</span>
+                            <ul>
+                                <li><a href="@Url.Action("GetId", "Offer")">Offer Details </a></li>
+                                <li><a href="@Url.Action("GetCategory", "Offer")">Category</a></li>
+                                <li><a href="@Url.Action("GetTopThreeLikes", "Offer")">Top 3 Likes</a></li>
+                                <li><a href="@Url.Action("GetByOpenedDate", "Offer")">Posted Date</a></li>
+                                <li><a href="@Url.Action("EngageOffer", "Offer")">Engage Offer </a></li>
+                                <li><a href="@Url.Action("GetIdForEditOffer", "Offer")">Edit Offer</a></li>
+                                <li><a href="@Url.Action("PostOffer", "Offer")">Add Offer</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Employee</span>
+                            <ul>
+                                <li><a href="@Url.Action("ViewEmployeeOffers", "Employee")">Employee Offers</a></li>
+                                <li><a href="@Url.Action("ViewMostLikedOffers", "Employee")">Most Liked Offers</a></li>
+                                <li><a href="@Url.Action("ViewEmployeeProfile", "Employee")">Profile</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="opener">Points</span>
+                            <ul>
+                                <li><a href="@Url.Action("GetPointsByEmployeeId", "Points")">Employee Points</a></li>
+                                <li><a href="@Url.Action("RefreshPointsByEmployee", "Points")">Refreshed Points</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/assets/js/browser.min.js"></script>
+    <script src="~/assets/js/breakpoints.min.js"></script>
+    <script src="~/assets/js/transition.js"></script>
+    <script src="~/assets/js/owl-carousel.js"></script>
+    <script src="~/assets/js/custom.js"></script>
+</body>
+
+
+
+
+</html>
+
